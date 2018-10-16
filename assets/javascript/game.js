@@ -7,6 +7,7 @@ console.log(chosenWord);
 var underScore = [];
 var rightword = [];
 var wrongword = [];
+var score = document.getElementsByClassName("underScore");
 // create underscores based on word length
 let underscore = () => {
     for(let i = 0; i < chosenWord.length; i++){
@@ -19,10 +20,14 @@ console.log(underscore());
 document.addEventListener("keypress",(event) => {
     let keycode = event.keyCode;
     let keyword = String.fromCharCode(keycode);
-    // if guess is correct push to rightword array
+  
     if(chosenWord.indexOf(keyword) > -1) {
         rightword.push(keyword);
-        console.log(rightword);
+        underScore[chosenWord.indexOf(keyword)] = keyword;
+        if(underScore.join("") == chosenWord) {
+            alert("You win!");
+        }
+        
     }
     // if worng push to wrongword array
     else {
@@ -33,7 +38,7 @@ document.addEventListener("keypress",(event) => {
 });
 // check if guess is right
 underScore[chosenWord.indexOf(keyword)] = keyword;
-console.log(keyword);
+console.log(underScore);
 
 // if right push to right array
 // if wrong push to wrong array
