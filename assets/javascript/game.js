@@ -7,15 +7,17 @@ console.log(chosenWord);
 var underScore = [];
 var rightword = [];
 var wrongword = [];
-var score = document.getElementsByClassName("underScore");
+var docUnderScore = document.getElementsByClassName("underscore");
+var docRightGuess = document.getElementsByClassName("RightGuess");
 // create underscores based on word length
 let underscore = () => {
     for(let i = 0; i < chosenWord.length; i++){
         underScore.push("_");
+       
     }
     return underScore;
 }
-console.log(underscore());
+
 // get users guess
 document.addEventListener("keypress",(event) => {
     let keycode = event.keyCode;
@@ -24,6 +26,8 @@ document.addEventListener("keypress",(event) => {
     if(chosenWord.indexOf(keyword) > -1) {
         rightword.push(keyword);
         underScore[chosenWord.indexOf(keyword)] = keyword;
+        docUnderScore[0].innerHTML = underScore().join("");
+        docRightGuess[0].innerHTML = docRightGuess().join("");
         if(underScore.join("") == chosenWord) {
             alert("You win!");
         }
@@ -32,13 +36,12 @@ document.addEventListener("keypress",(event) => {
     // if worng push to wrongword array
     else {
         wrongword.push(keyword);
-        console.log(wrongword);
-    }
-    // console.log(keyword);
+       }
 });
+
+// docUnderScore[0].innerHTML = underScore().join("");
 // check if guess is right
-underScore[chosenWord.indexOf(keyword)] = keyword;
-console.log(underScore);
+
 
 // if right push to right array
 // if wrong push to wrong array
