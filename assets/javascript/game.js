@@ -2,46 +2,49 @@
 var words = ["ewok","chewbacca","yoda","vader","tatooine","endor","naboo"];
 // choose words at random
 var randWord = Math.floor(Math.random() * words.length);
+var rightWord = [];
+var wrongWord = [];
 var chosenWord = words[randWord];
-console.log(chosenWord);
 var underScore = [];
-var rightword = [];
-var wrongword = [];
-var docUnderScore = document.getElementsByClassName("underscore");
-var docRightGuess = document.getElementsByClassName("RightGuess");
+// Testing
+console.log(chosenWord);
+// var docUnderScore = document.getElementsByClassName("underscore");
+// var docRightGuess = document.getElementsByClassName("RightGuess");
 // create underscores based on word length
-let underscore = () => {
+let generateUnderscore = () => {
     for(let i = 0; i < chosenWord.length; i++){
         underScore.push("_");
        
     }
     return underScore;
 }
-
+// Testing
+console.log(generateUnderscore());
 // get users guess
 document.addEventListener("keypress",(event) => {
-    let keycode = event.keyCode;
-    let keyword = String.fromCharCode(keycode);
-  
+    var keycode = event.keyCode;
+    var keyword = String.fromCharCode(keycode);
     if(chosenWord.indexOf(keyword) > -1) {
-        rightword.push(keyword);
+        // if guess is right
+        rightWord.push(keyword);
+        // Replace underscore with letter
         underScore[chosenWord.indexOf(keyword)] = keyword;
-        docUnderScore[0].innerHTML = underScore().join("");
-        docRightGuess[0].innerHTML = docRightGuess().join("");
-        if(underScore.join("") == chosenWord) {
-            alert("You win!");
+        if(underScore.join('') == chosenWord) {
+            alert('YOU WIN!');
         }
-        
-    }
-    // if worng push to wrongword array
-    else {
-        wrongword.push(keyword);
-       }
+        // testing
+        console.log(rightWord);
+}
+else {
+    // if guess is wrong
+    wrongWord.push(keyword);
+    // testing
+    console.log(wrongWord);
+}
+    // Testing
+    console.log(event);
+    console.log(keycode);
+    console.log(keyword);
 });
 
-// docUnderScore[0].innerHTML = underScore().join("");
-// check if guess is right
 
-
-// if right push to right array
-// if wrong push to wrong array

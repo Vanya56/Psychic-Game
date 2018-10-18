@@ -1,5 +1,39 @@
+.container {
+    background:url("https://images.pexels.com/photos/974471/nature-night-sky-stars-974471.jpeg?cs=srgb&dl=abstract-astrology-astronomy-974471.jpg&fm=jpg");
+    background-size:cover;
+    height:800px;
+}
+
+h1 {
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: yellow;  
+}
+
+h3 {
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: yellow;
+}
+
+.underscore {
+    color: yellow;
+}
+
+.rightGuess {
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: yellow;  
+}
+
+.wrongGuess {
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: yellow;
+}
+
 header {
-    border: 1px solid black;
+    border: 1px solid gold;
     text-align: center;
     font-size: 40px;
     margin: 0 auto;
@@ -9,7 +43,7 @@ header {
 }
 
 .underscore {
-    border: 1px solid black;
+    border: 1px solid gold;
     text-align: center;
     font-size: 90px;
     margin: 0 auto;
@@ -18,7 +52,7 @@ header {
 }
 
 .rightGuess {
-    border: 1px solid black;
+    border: 1px solid gold;
     text-align: center;
     font-size: 40px;
     margin: 0 auto;
@@ -27,7 +61,7 @@ header {
 }
 
 .wrongGuess {
-    border: 1px solid black;
+    border: 1px solid gold;
     text-align: center;
     font-size: 40px;
     margin: 0 auto;
