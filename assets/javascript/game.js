@@ -11,7 +11,7 @@ var docRightGuess = document.getElementsByClassName("rightGuess");
 var docWrongGuess = document.getElementsByClassName("wrongGuess");
 // Testing
 console.log(chosenWord);
-alert("Press any key to start the game.");
+alert("Make your first letter choice.");
 
 // create underscores based on word length
 let generateUnderscore = () => {
