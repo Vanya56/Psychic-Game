@@ -11,21 +11,24 @@ var docRightGuess = document.getElementsByClassName("rightGuess");
 var docWrongGuess = document.getElementsByClassName("wrongGuess");
 // Testing
 console.log(chosenWord);
+// alert("Press any key to start the game.");
 
 // create underscores based on word length
 let generateUnderscore = () => {
     for(let i = 0; i < chosenWord.length; i++){
         underScore.push("_");
-       
-    }
+      
+       }
     return underScore;
+    // docUnderScore[0].innerHTML = chosenWord.length("");
 }
 // Testing
 console.log(generateUnderscore());
+alert("Press any key to start the game.");
 // get users guess
 document.addEventListener("keypress",(event) => {
-    var keycode = event.keyCode;
-    var keyword = String.fromCharCode(keycode);
+    // var keycode = event.keyCode;
+    var keyword = String.fromCharCode(event.keyCode);
     if(chosenWord.indexOf(keyword) > -1) {
         // if guess is right
         rightWord.push(keyword);
@@ -44,10 +47,9 @@ else {
     // if guess is wrong
     wrongWord.push(keyword);
     docWrongGuess[0].innerHTML = wrongWord.join("");
-if(docWrongGuess > 5){
-    alert("YOU LOSE!");
+
 }
-}
+
     
     // testing
     console.log(wrongWord);
