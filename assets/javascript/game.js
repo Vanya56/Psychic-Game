@@ -11,7 +11,7 @@ var docRightGuess = document.getElementsByClassName("rightGuess");
 var docWrongGuess = document.getElementsByClassName("wrongGuess");
 // Testing
 console.log(chosenWord);
-// alert("Press any key to start the game.");
+alert("Press any key to start the game.");
 
 // create underscores based on word length
 let generateUnderscore = () => {
@@ -24,7 +24,7 @@ let generateUnderscore = () => {
 }
 // Testing
 console.log(generateUnderscore());
-alert("Press any key to start the game.");
+
 // get users guess
 document.addEventListener("keypress",(event) => {
     // var keycode = event.keyCode;
