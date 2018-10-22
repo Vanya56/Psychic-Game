@@ -20,7 +20,7 @@ let generateUnderscore = () => {
       
        }
     return underScore;
-    // docUnderScore[0].innerHTML = chosenWord.length("");
+    docUnderScore[0].innerHTML = chosenWord.length("");
 }
 // Testing
 console.log(generateUnderscore());
