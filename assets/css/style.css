@@ -1,20 +1,23 @@
 .container {
-    background:url("https://images.pexels.com/photos/974471/nature-night-sky-stars-974471.jpeg?cs=srgb&dl=abstract-astrology-astronomy-974471.jpg&fm=jpg");
-    background-size:cover;
-    height:800px;
+    background: url("https://images.pexels.com/photos/974471/nature-night-sky-stars-974471.jpeg?cs=srgb&dl=abstract-astrology-astronomy-974471.jpg&fm=jpg");
+    background-size: cover;
+    height: 800px;
 }
 
 h1 {
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: yellow;  
+    color: yellow;
 }
+
+
 
 h3 {
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: yellow;
 }
+
 
 .underscore {
     color: yellow;
@@ -23,7 +26,7 @@ h3 {
 .rightGuess {
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: yellow;  
+    color: yellow;
 }
 
 .wrongGuess {
@@ -48,7 +51,7 @@ header {
     font-size: 90px;
     margin: 0 auto;
     height: 150px;
-    width: 80%;   
+    width: 80%;
 }
 
 .rightGuess {
@@ -57,7 +60,7 @@ header {
     font-size: 40px;
     margin: 0 auto;
     height: 150px;
-    width: 70%;  
+    width: 70%;
 }
 
 .wrongGuess {
@@ -66,5 +69,5 @@ header {
     font-size: 40px;
     margin: 0 auto;
     height: 150px;
-    width: 70%;  
+    width: 70%;
 }
